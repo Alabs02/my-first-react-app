@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 
 function App() {
+  const title = "Welcome to the new blog"
+  const url = "https://netninja.dev"
+  let likes = 50
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header className="App__header">
+        <span className="App__title">{ title }</span>
       </header>
+
+      <main className="Main__content">
+        <span>Liked {  likes }</span>
+        <a href={ url }>Dojo</a>
+      </main>
     </div>
   );
 }
