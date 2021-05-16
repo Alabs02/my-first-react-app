@@ -1,0 +1,46 @@
+.BlogDetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    padding: 0 2rem;
+
+    &__title {
+        margin: 3rem 0 1rem 0rem;
+        font-size: $headingSize;
+        color: $brandPink !important;
+        text-transform: capitalize;
+    }
+
+    &__content {
+        background: #FAFAFA;
+        border-radius: 10px;
+        padding: 1rem;
+        color: #616161;
+        margin: 1rem 0;
+        line-height: 20pt;
+        letter-spacing: .1pt;
+        font-size: $textSize;
+    }
+
+    &__info {
+        padding: 1rem 2rem;
+        margin-bottom: 1rem;
+        background: #f5f2f2;
+        border-radius: 5px;
+        color: #424242;
+        font-size: .8rem;
+        text-transform: uppercase;
+        letter-spacing: 1.5pt;
+
+    }
+
+    
+}
+
+@media screen and (min-width: 780px) {
+    .BlogDetails {
+        align-items: left;
+        padding: 0 6rem;
+    }
+}

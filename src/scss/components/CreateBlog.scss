@@ -1,0 +1,63 @@
+.CreateBlog {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    h2 {
+        margin: 2rem 0 1rem 0;
+        font-size: $headingSize;
+        color: $brandGrey;
+    }
+
+    .form {
+        // display: flex;
+        // flex-direction: column;
+        // align-items: center;
+        width: 35%;
+
+        &__group {
+            margin-bottom: 1rem;
+            // border: 1px solid red;
+            width: 100%;
+        }
+
+        &__label {
+            color: #616161;
+            font-size: .9rem;
+            text-transform: uppercase;
+            letter-spacing: 1.2pt;
+            font-weight: 400;
+            margin-bottom: .2rem;
+        }
+
+        &__input {
+            width: 100%;
+            border: none;
+            outline: none;
+            color: #616161;
+            font-size: $textSize;
+            border-radius: 5px;
+            padding: 1rem 1.5rem;
+            background: #F5F5F5;
+        }
+
+        .btn {
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            padding: 0.5rem 1rem;
+            background: $brandPink;
+            color: #fff;
+            font-size: $textSize;
+            text-transform: capitalize;
+            cursor: pointer;
+            @include boxShadow(#212121, 0px, 4px, 8px, 0.2);
+
+            &:hover {
+                @include boxShadow(#212121, 0px, 5px, 10px, 0.3);
+            }
+        }
+    }
+
+}

@@ -1,27 +1,26 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import BlogList from "../components/BlogList";
+import useFetch from "../hooks/useFetch";
 
 const Home = () => {
-    const [blogs, setBlogs] = useState([
-        { title: 'This is a blog', content: 'Lorem...', author: 'Alabs', 'id': 1 },
-        { title: 'Welcome Party', content: 'Lorem...', author: 'Usman', 'id': 2 },
-        { title: 'Web top list', content: 'Lorem...', author: 'Snow', 'id': 3 },
-        { title: 'Web top list', content: 'Lorem...', author: 'Snow', 'id': 4 },
-    ])
+
+    const { data: blogs, isPending, error } = useFetch('http://127.0.0.1:8000/blogs')
 
     const handleDelete = (id) => {
-        const filteredBlogs = blogs.filter(blog => blog.id !== id)
-        setBlogs(filteredBlogs)
-    } 
-
-    useEffect(() => {
-        console.log('before mount')
-    }, [])
+        fetch(`http://localhost:8000/blogs/${id}`, {
+            method: "DELETE"
+        }).then(response => console.log('Deleted', response))
+        .catch(error => console.error(error.message))
+    }
 
     return ( 
         <div className="Home">
-            <h2 className="Home__heading">Blog Post</h2>
-            <BlogList blogs={ blogs } handleDelete={handleDelete} />
+            {error && <div className="alert">
+                <span>{error}</span>
+            </div>}
+            {isPending && <div className="loader">Loading...</div>}
+            {blogs && <h2 className="Home__heading">Blog Post</h2>}
+            {blogs && <BlogList blogs={ blogs } handleDelete={handleDelete} /> }
         </div>
     );
 }

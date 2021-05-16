@@ -1,8 +1,0 @@
-{
-    "Blog": {
-        "title": "string",
-        "content": "String",
-        "author": "string",
-        "id": "int"
-    }
-}
