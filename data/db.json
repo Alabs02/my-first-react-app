@@ -1,0 +1,10 @@
+{
+    "blogs": [
+        {
+            "title": "School party",
+            "content": "Lorem ipsum",
+            "author": "Yoshi",
+            "id": 1
+        }
+    ]
+}
