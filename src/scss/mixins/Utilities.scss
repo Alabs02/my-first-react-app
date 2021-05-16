@@ -1,0 +1,27 @@
+@mixin boxShadow($color, $y, $x, $blur, $opaq) {
+    box-shadow: $y $x $blur rgba($color: $color, $alpha: $opaq);
+}
+
+.icon-btn {
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    padding: .2rem;
+    background: #fff;
+
+    display: flex;
+    // visibility: hidden;
+
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    i {
+        color: $brandPink;
+        font-size: 28px;
+    }
+
+    &:hover {
+        @include boxShadow(#424242, 2px, 0px, 4px, 0.5);
+    }
+}

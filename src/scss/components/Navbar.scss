@@ -1,0 +1,30 @@
+.Navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    @include boxShadow(#1d0110, 4px, 0px, 10px, 0.2px);
+
+    &__title {
+        font-size: $titleSize;
+        font-weight: 700;
+        color: $brandPink;
+    }
+
+    &__items {
+        display: flex;
+    }
+
+    &__item {
+        padding-left: 1rem;
+        font-size: $textSize;
+        font-weight: 500;
+
+        a {
+            color: $brandGrey;
+        }
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+}

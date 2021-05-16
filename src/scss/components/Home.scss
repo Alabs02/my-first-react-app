@@ -1,0 +1,18 @@
+.Home {
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
+    padding: 2rem;
+
+    &__heading {
+        font-size: $headingSize;
+        color: $brandGrey;
+        margin-bottom: 2rem;
+    }
+}
+
+@media screen and (min-width: 780px) {
+    .Home {
+        padding: 4rem;
+    }
+}

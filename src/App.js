@@ -1,21 +1,17 @@
-import './App.scss';
+import './scss/App.scss';
+import Navbar from './components/Navbar';
+import Home from './views/Home';
 
 function App() {
-  const title = "Welcome to the new blog"
-  const url = "https://netninja.dev"
-  let likes = 50
-  return (
-    <div className="App">
-      <header className="App__header">
-        <span className="App__title">{ title }</span>
-      </header>
+    return (
+        <div className="App">
+            <Navbar />
 
-      <main className="Main__content">
-        <span>Liked {  likes }</span>
-        <a href={ url }>Dojo</a>
-      </main>
-    </div>
-  );
+            <main className="Main__content">
+                <Home />
+            </main>
+        </div>
+    );
 }
 
 export default App;

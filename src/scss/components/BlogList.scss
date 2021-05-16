@@ -1,0 +1,61 @@
+.BlogList {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card {
+    position: relative;
+
+    padding: 1rem 2rem;
+    margin: 0 0rem 2rem 0rem;
+    width: 100%;
+    min-height: 5rem;
+
+    border-radius: 10px;
+    background: #ffffff;
+    @include boxShadow(#1d0110, 4px, 0px, 8px, 0.2);
+
+    &__btn {
+        @extend .icon-btn;
+        display: none !important;
+    }
+
+    &__title {
+        color: $brandPink;
+        font-weight: 500;
+        font-size: $titleSize;
+        letter-spacing: 1.08pt;
+        text-transform: capitalize;
+    }
+
+    &__content {
+        color: #616161;
+        font-size: $textSize;
+        margin: .5rem 0;
+    }
+
+    &__info {
+        color: #757575;
+        letter-spacing: 1.1pt;
+        font-size: .68rem;
+        text-transform: uppercase;
+        margin-top: .5rem;
+    }
+
+}
+
+
+
+@media screen and (min-width: 780px) {
+    .BlogList {
+        flex-direction: row;
+    }
+
+    .card {
+        width: 30%;
+    }
+}
